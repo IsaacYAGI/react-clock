@@ -1,10 +1,19 @@
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+  const [currentDate, setCurrentDate] = useState(new Date());
+
+  const updateDate = (newDate) => setCurrentDate(newDate.getTime());
+  
+  useEffect(()=>{
+    setInterval(() => updateDate(new Date()),1000);
+  }, [])
+
   return (
     <div id="clock"> 
     
-      <span>Wed Jul 07 2021 08:54:08 GMT-0500</span>
+      <span>{currentDate}</span>
       <div id="formats">
         <input id="formato24H" type="radio" name="formato"/>
         <label htmlFor="formato24H">24H</label>
