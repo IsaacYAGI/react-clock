@@ -10,9 +10,7 @@ function App() {
 
   const formatDate = (date, formatingStyle = "pp") => format(date, formatingStyle);
   
-  useEffect(()=>{
-    setInterval(() => setCurrentDate(new Date()),1000);
-  }, [])
+  setInterval(() => setCurrentDate(new Date()),1000);
 
   return (
     <div id="clock"> 
