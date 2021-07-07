@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react';
+import { format } from 'date-fns'
 import './App.css';
 
 function App() {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const militarFormat = "kk:mm:ss";
+  const commonFormat = "pp";
+  const [currentDate, setCurrentDate] = useState(format(new Date(), militarFormat));
 
-  const updateDate = (newDate) => setCurrentDate(newDate.getTime());
+  const updateDate = (newDate, formatingStyle = "pp") => setCurrentDate(format(newDate, formatingStyle));
   
   useEffect(()=>{
-    setInterval(() => updateDate(new Date()),1000);
+    setInterval(() => updateDate(new Date(), militarFormat),1000);
   }, [])
 
   return (
