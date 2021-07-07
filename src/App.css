@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+/* Google font */
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body, html, #clock {
+    height: 100vh;
+    background-color: #121212;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#clock {
+
+    display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center;        /* center items horizontally, in this case */
+    height: 100vh;
+
+    font-family: 'Orbitron', sans-serif;
+    color: #66ff99;
+    font-size: 45px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#formats {
+    font-family: 'Orbitron', sans-serif;
+    color: #66ff99;
+    font-size: 15px;
 }

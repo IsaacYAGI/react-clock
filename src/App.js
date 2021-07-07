@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div id="clock"> 
+    
+      <span>Wed Jul 07 2021 08:54:08 GMT-0500</span>
+      <div id="formats">
+        <input id="formato24H" type="radio" name="formato"/>
+        <label htmlFor="formato24H">24H</label>
+        <input id="formato12H" type="radio" name="formato"/>
+        <label htmlFor="formato12H">12H</label>
+      </div>
+    
+  </div>
   );
 }
 
